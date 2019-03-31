@@ -7,10 +7,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 Any IDE that can run java.    
+```  
+Netbeans
+Eclipse
 ```
-  + Netbeans  
-  + Eclipse
-  ```  
 MySQL Workbench or XAMPP for that database. 
 
 ## Build with
