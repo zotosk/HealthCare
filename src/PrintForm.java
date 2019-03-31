@@ -71,6 +71,7 @@ public class PrintForm extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Print report");
 
         printButton.setText("Export PDF report");
         printButton.addActionListener(new java.awt.event.ActionListener() {

@@ -61,6 +61,7 @@ public class PatientInformation extends javax.swing.JFrame {
         informationGetPatientID = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Patient information");
 
         jPanel2.setBackground(new java.awt.Color(4, 179, 152));
 

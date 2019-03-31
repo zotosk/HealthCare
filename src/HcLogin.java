@@ -47,7 +47,7 @@ public class HcLogin extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Hospital Care");
+        setTitle("Hospital Care login");
         setBackground(new java.awt.Color(153, 102, 0));
         setPreferredSize(new java.awt.Dimension(600, 500));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -168,7 +168,7 @@ public class HcLogin extends javax.swing.JFrame {
                 printLogs.showLogs(getUserNameCurrent,countUser);
                 //#display the main frame
                 HcForm showTheMainForm = new HcForm();
-                showTheMainForm.userLogedIn.setText("User : " + inputUsername);
+                showTheMainForm.userLogedIn.setText("Logged in as : " + inputUsername);
                 showTheMainForm.setVisible(true);               
             }
             
