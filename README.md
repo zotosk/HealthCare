@@ -19,7 +19,6 @@ These instructions will get you a copy of the project up and running on your loc
 
 ```
 kzwtos@gmail.com  if you have any questions
-
 ```
 
 Thank you
