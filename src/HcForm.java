@@ -47,7 +47,7 @@ public class HcForm extends javax.swing.JFrame {
             Connection con = dbCon.getDbConnection();
             
             String queryPatient = "select p.id 'Patiend ID' , p.fname 'First name', p.lname 'Last name',\n" +
-                                "h.bed 'Bed Number', h.enter_date 'Enter date'\n" +
+                                "h.bed 'Bed Number', h.enter_date 'Enter date', h.exit_date 'Exit date'\n" +
                                 "from patients p inner join hospitalization h\n" +
                                 "on (p.id = h.patients_id)";
             Statement p_statement = con.prepareStatement(queryPatient);
@@ -314,30 +314,10 @@ public class HcForm extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Date - time", "Patient ID", "First name", "Last name"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, true, true
-            };
 
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
             }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
+        ));
         patientsVisitsTable.setGridColor(new java.awt.Color(204, 204, 204));
-        patientsVisitsTable.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                patientsVisitsTableMouseClicked(evt);
-            }
-        });
         jScrollPane1.setViewportView(patientsVisitsTable);
 
         jButton9.setBackground(new java.awt.Color(255, 101, 101));
@@ -875,12 +855,6 @@ public class HcForm extends javax.swing.JFrame {
        
         newHospitalizationForm.setVisible(true);
     }//GEN-LAST:event_buttonAddHospitalizationActionPerformed
-
-    private void patientsVisitsTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_patientsVisitsTableMouseClicked
-        // TODO add your handling code here:
-        
-    
-    }//GEN-LAST:event_patientsVisitsTableMouseClicked
     
     /**
      * @param args the command line arguments
