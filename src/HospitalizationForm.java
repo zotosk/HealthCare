@@ -222,7 +222,10 @@ public class HospitalizationForm extends javax.swing.JFrame {
                 
                 SimpleDateFormat dateFormatExit = new SimpleDateFormat("yyyy-MM-dd");
                 String getDateNewFormatExit = dateFormat.format(hospitalizationExitDate.getDate());
-                String query = "INSERT INTO hospitalization SET bed ='"+hospitalizationBedNumber.getText()+"',"+"enter_date = '"+getDateNewFormat+"',"+"exit_date = '"+getDateNewFormatExit+"',"+"patients_id =(SELECT id FROM patients WHERE id=?)";
+                String query = "INSERT INTO hospitalization SET bed ='"+hospitalizationBedNumber.getText()+"',"
+                        +"enter_date = '"+getDateNewFormat+"',"
+                        +"exit_date = '"+getDateNewFormatExit+"',"
+                        +"patients_id =(SELECT id FROM patients WHERE id=?)";
                 
                 ImageIcon registerSuccess = new ImageIcon("src/img/imgsuccess.png");
                 PreparedStatement pst = con.prepareStatement(query);
@@ -231,8 +234,8 @@ public class HospitalizationForm extends javax.swing.JFrame {
                 pst.close();
                 st.close();
                
-                JOptionPane.showMessageDialog(null, "Update successful , "+" ' " + hospitalizationPatientFname.getText() + " ' " + " details Updated!Bed added","Success!", JOptionPane.INFORMATION_MESSAGE, registerSuccess );
-                
+                JOptionPane.showMessageDialog(null, "Update successful , "+" ' " + hospitalizationPatientFname.getText() 
+                        + " ' " + " details Updated!Bed added","Success!", JOptionPane.INFORMATION_MESSAGE, registerSuccess );              
             }
         } catch (SQLException ex) {
             Logger.getLogger(RegistrationNewPatient.class.getName()).log(Level.SEVERE, null, ex);
