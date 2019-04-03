@@ -7,7 +7,10 @@ Those instructions below will get you a copy of the project up and running on yo
 
 ### Prerequisites
 + The project was build with IDE Netbeans ( free open source software )  
-+ MySQL Workbench or XAMPP for that database. 
++ MySQL Workbench or XAMPP for the database. 
+```
+You can run the project locally on your terminal, no extra installations required
+```
 
 ## Build with
 + MySql java connector  
