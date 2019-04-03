@@ -751,9 +751,11 @@ public class HcForm extends javax.swing.JFrame {
          
             //##creating our sql query,( making a selection from the patients enitity and inner join the examinations enitity .
             //##fetch sql data from examinations,and patients ->current collumns are : "Patient ID", "First name", "Last name", "MRI", "CT", "CR".... 
-            String sql = "select  p.id 'Patient ID', p.fname 'First name', p.lname 'Last name',p.address,p.father_name,p.postcode,p.phone,p.email,p.dob,p.insurance,p.nationality,p.patients_info, e.MRI, e.CT, e.CR, e.date_time_examination\n" +
+            String sql = "select  p.id 'Patient ID', p.fname 'First name', p.lname 'Last name',"
+                    + "p.address,p.father_name,p.postcode,p.phone,p.email,p.dob,p.insurance,"
+                    + "p.nationality,p.patients_info, e.MRI, e.CT, e.CR, e.date_time_examination\n" +
                         "from patients p inner join examinations e\n" +
-                        "on (p.id = e.patients_id) where fname like '%" + patientFname.getText() + "%'"; //**search for a patient, when the user inputs a patient's name
+                        "on (p.id = e.patients_id) where fname like '%" + patientFname.getText() + "%'"; //**search for a patient
                                
             p_statement = con.prepareStatement(sql);
             res = p_statement.executeQuery(sql);
