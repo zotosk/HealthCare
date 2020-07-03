@@ -1,4 +1,4 @@
-<img src="src/img/hc1.jpg">
+<img src="src/img/hc1.jpg"><img src="src/img/hc2.jpg"><img src="src/img/hc3.jpg"><img src="src/img/hc4.jpg">
 
 
 # Health information system
